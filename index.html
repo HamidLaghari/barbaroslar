@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Barbaroslar | Landing Page UI Design</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo"><img src="./images/logo.png" alt="trt logo"></a>
+        <div class="toggle"><img src="./images/toggle.png"></div>
+    </header>
+    <div class="banner">
+        <div class="content">
+            <h1>Barbaroslar</h1>
+            <h2>Ottoman supremacy in the Mediterranean</h2>
+            <p>Barbaroslar is an upcoming Turkish television series directed by The Taylan Brothers and written by
+                Cüneyt Aysan,
+                Ozan Aksungur and Oğuz Ayaz. It is a historical non-fiction series that was begun shooting in the last
+                weeks of March 2021.
+                It stars Engin Altan Düzyatan and Ulaş Tuna Astepe with the lead roles. The series describes the life of
+                Barbaros Hayreddin Pasha,
+                a "Kapudan Pasha" of the Ottoman Empire.</p>
+            <a href="#" class="play" onclick="toggle();"><img src="./images/play.png">Watch Trailer</a>
+            <div class="slide"></div>
+            <ul class="sci">
+                <li><a href="#"><img src="./images/facebook.png"></a></li>
+                <li><a href="#"><img src="./images/twitter.png"></a></li>
+                <li><a href="#"><img src="./images/instagram.png"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="trailer">
+        <video src="./trailors/Bekleyin...Yakında_TRT_1'deyiz_⚓️(720p).mp4" controls="true"></video>
+        <img src="./images/close.png" class="close" onclick="toggle();">
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var trailer =document.querySelector('.trailer');
+            var video =document.querySelector('video');
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+        }
+    </script>
+    <p class="rights">2021 &copy; Hamid Laghari | All rights reserved</p>
+</body>
+
+</html>
